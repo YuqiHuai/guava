@@ -11,14 +11,14 @@ class SampleTest {
 	 * Should return true when k is a positive integer.
 	 */
 	@Test
-	void ToPositiveIntger() {
+	void kIsPositiveIntger() {
 		Assertions.assertTrue(DoubleMath.isPowerOfTwo(2));  // k = 1
 		Assertions.assertTrue(DoubleMath.isPowerOfTwo(4));  // k = 2
 		Assertions.assertTrue(DoubleMath.isPowerOfTwo(8));  // k = 3
 		Assertions.assertTrue(DoubleMath.isPowerOfTwo(16)); // k = 4
 	}
 	@Test
-	void ToPositiveDouble() {
+	void kIsPositiveDouble() {
 		Assertions.assertFalse(DoubleMath.isPowerOfTwo(Math.pow(2, 1.5))); // k = 1.5
 		Assertions.assertFalse(DoubleMath.isPowerOfTwo(Math.pow(2, 2.5))); // k = 2.5
 		Assertions.assertFalse(DoubleMath.isPowerOfTwo(Math.pow(2, 3.5))); // k = 3.5
@@ -26,14 +26,14 @@ class SampleTest {
 	}
 	
 	@Test
-	void ToNegativeInteger() {
+	void kIsNegativeInteger() {
 		Assertions.assertTrue(DoubleMath.isPowerOfTwo(0.5)); // k = -1
 		Assertions.assertTrue(DoubleMath.isPowerOfTwo(0.25)); // k = -2
 		Assertions.assertTrue(DoubleMath.isPowerOfTwo(0.125)); // k = -3
 	}
 
 	@Test
-	void ToNegativeDouble() {
+	void kIsNegativeDouble() {
 		Assertions.assertFalse(DoubleMath.isPowerOfTwo(Math.pow(2, -1.5))); // k = - 1.5
 		Assertions.assertFalse(DoubleMath.isPowerOfTwo(Math.pow(2, -2.5))); // k = - 2.5
 		Assertions.assertFalse(DoubleMath.isPowerOfTwo(Math.pow(2, -3.5))); // k = - 3.5
@@ -41,7 +41,7 @@ class SampleTest {
 	}
 	
 	@Test
-	void ToZero() {
+	void kIsZero() {
 		boolean b = DoubleMath.isPowerOfTwo(1); // k = 0
 		Assertions.assertTrue(b);
 	}
